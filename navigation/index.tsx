@@ -28,6 +28,7 @@ import {
 import LinkingConfiguration from './LinkingConfiguration';
 import { Ionicons, AntDesign } from '@expo/vector-icons';
 import { StartScreen } from '../screens/StartScreen';
+import { useThemeColor } from '../components/Themed';
 
 export default function Navigation({
 	colorScheme,
@@ -78,15 +79,15 @@ const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
 function BottomTabNavigator() {
 	const colorScheme = useColorScheme();
+	console.log(colorScheme)
 
 	return (
 		<BottomTab.Navigator
 			initialRouteName="Home"
 			screenOptions={{
-        headerStyle: {backgroundColor: '#1B1324', height: 100},
-				tabBarActiveTintColor: 'white',
-        tabBarInactiveTintColor: 'gray',
-        tabBarStyle: {backgroundColor: '#1B1324', height: 70, padding: 15}
+				headerStyle: { backgroundColor: Colors[colorScheme].menu, height: 100 },
+				tabBarActiveTintColor: Colors[colorScheme].tabIconSelected,
+				tabBarStyle: { backgroundColor: Colors[colorScheme].menu, height: 70, padding: 15 }
 			}}
 		>
 			<BottomTab.Screen
