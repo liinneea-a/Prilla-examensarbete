@@ -7,12 +7,15 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest --watchAll",
+    "test": "jest",
     "predeploy": "expo export:web",
     "deploy-hosting": "npm run predeploy && firebase deploy --only hosting"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+    ]
   },
   "dependencies": {
     "@aashu-dubey/react-native-rating-bar": "^0.2.0",
@@ -37,6 +40,7 @@
     "expo-web-browser": "~12.0.0",
     "firebase": "^9.15.0",
     "formik": "^2.2.9",
+    "jest": "^26.6.3",
     "lodash.isequal": "^4.5.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
