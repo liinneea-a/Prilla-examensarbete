@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { getOneDocById } from "../helper";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
+import React from "react";
 
 interface Props {
   review: Review;
