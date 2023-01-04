@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
-import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
+import React, { useEffect, useState } from "react";
+import { ScrollView } from "react-native-gesture-handler";
 import {
   StyleSheet,
   Image,
   ImageBackground,
+  TouchableOpacity,
   ActivityIndicator,
 } from "react-native";
 import * as Haptics from "expo-haptics";
@@ -14,7 +15,6 @@ import { RootStackScreenProps } from "../types";
 import { RateInactive } from "../components/RateInactive";
 import { AntDesign } from "@expo/vector-icons";
 import { StrengthBar } from "../components/StrengthBar";
-import React from "react";
 interface ReviewWithAuthor extends Review {
   author: string;
 }
@@ -75,7 +75,6 @@ function ProductDetailScreen({
       console.log(err);
     }
   };
-
   const toggleButton = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     setLike(!like);
@@ -128,13 +127,7 @@ function ProductDetailScreen({
                     {rev.author}
                   </Text>
                 </TouchableOpacity>
-
-                <RateInactive
-                  rating={rev.rating}
-                  dotSize={10}
-                  single={15}
-                  width={80}
-                />
+                <RateInactive rating={rev.rating} />
                 <Text>{rev.rating}</Text>
               </View>
               <Text>{rev.description}</Text>
@@ -196,7 +189,7 @@ function ProductDetailScreen({
           <View style={styles.tableDataContainer}>
             <View style={styles.tableRow}>
               <Text>Styrka</Text>
-              <StrengthBar strength={product?.strenght} />
+              <StrengthBar strength={product?.strength} />
             </View>
             <View style={styles.tableRow}>
               <Text>Antal</Text>
