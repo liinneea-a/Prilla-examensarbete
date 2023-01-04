@@ -25,7 +25,9 @@ const Tabbar = () => {
               color="white"
             />
           </View>
-          <Text style={styles.text}>Trendande sorter</Text>
+          <Text style={styles.text} testID="trending">
+            Trendande sorter
+          </Text>
         </View>
       </View>
 
@@ -43,7 +45,9 @@ const Tabbar = () => {
               color="white"
             />
           </View>
-          <Text style={styles.text}>Toppbetyg</Text>
+          <Text style={styles.text} testID="popular">
+            Toppbetyg
+          </Text>
         </View>
       </View>
     </View>

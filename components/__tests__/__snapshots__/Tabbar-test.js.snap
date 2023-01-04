@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should contain to text tags 1`] = `
+<View
+  style={
+    Object {
+      "justifyContent": "space-between",
+      "marginBottom": 10,
+      "marginTop": 10,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomLeftRadius": 6,
+          "borderTopLeftRadius": 6,
+          "height": 50,
+          "justifyContent": "space-around",
+          "marginLeft": 10,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "backgroundColor": "#C6ADE8",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "position": "relative",
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "borderBottomLeftRadius": 6,
+              "borderTopLeftRadius": 6,
+              "height": 50,
+              "opacity": 0.5,
+              "width": 50,
+            }
+          }
+        />
+        <Text />
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+            },
+            Object {
+              "color": "white",
+              "fontSize": 20,
+              "marginLeft": 20,
+            },
+          ]
+        }
+        testID="trending"
+      >
+        Trendande sorter
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomLeftRadius": 6,
+          "borderTopLeftRadius": 6,
+          "height": 50,
+          "justifyContent": "space-around",
+          "marginLeft": 10,
+          "marginTop": 10,
+          "width": "100%",
+        },
+        Object {
+          "backgroundColor": "#C6ADE8",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "position": "relative",
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "borderBottomLeftRadius": 6,
+              "borderTopLeftRadius": 6,
+              "height": 50,
+              "opacity": 0.5,
+              "width": 50,
+            }
+          }
+        />
+        <Text />
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+            },
+            Object {
+              "color": "white",
+              "fontSize": 20,
+              "marginLeft": 20,
+            },
+          ]
+        }
+        testID="popular"
+      >
+        Toppbetyg
+      </Text>
+    </View>
+  </View>
+</View>
+`;
