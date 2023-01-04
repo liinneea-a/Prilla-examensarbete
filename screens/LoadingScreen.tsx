@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 import { Text, View } from "../components/Themed";
 import { RootStackScreenProps } from "../types";
 import { useFonts } from "expo-font";
+import React from "react";
 
 export default function LoadingScreen({
   navigation,

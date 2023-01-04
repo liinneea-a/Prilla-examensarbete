@@ -21,7 +21,6 @@ import {
 import { Review, User } from "../Interfaces";
 import { ScrollView } from "react-native-gesture-handler";
 import { ReviewCard } from "../components/ReviewCard";
-import { useNavigation } from "@react-navigation/native";
 import {
   sendPasswordResetEmail,
   deleteUser,
@@ -29,6 +28,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { auth } from "../firebase";
+import React from "react";
 
 export default function ProfileScreen({
   navigation,
