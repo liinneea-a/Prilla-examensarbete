@@ -1,5 +1,4 @@
 import * as ImagePicker from "expo-image-picker";
-import { Constants } from "expo-constants";
 import { useEffect, useState } from "react";
 import { Platform, Image } from "react-native";
 import { View, Text } from "./Themed";
@@ -79,6 +78,7 @@ const ImageUpload = ({ handleUpload }: Props) => {
         </View>
       ) : (
         <TouchableOpacity
+          testID="button"
           onPress={PickImage}
           style={{ alignItems: "center", margin: 10 }}
         >

@@ -1,6 +1,5 @@
 import { TouchableOpacity, Image, StyleSheet } from "react-native";
 import { Product } from "../Interfaces";
-import navigation from "../navigation";
 import { RateInactive } from "./RateInactive";
 import { Text, View } from "../components/Themed";
 import { useNavigation } from "@react-navigation/native";
@@ -13,24 +12,31 @@ export const ProductCard = ({ product }: Props) => {
   const navigation = useNavigation();
 
   return (
-    <View style={content.cardWrapper} key={product.id}>
-      <Image source={{ uri: product.photo }} style={card.image} />
+    <View style={content.cardWrapper} key={product?.id}>
+      <Image
+        testID="photo"
+        source={{ uri: product?.photo }}
+        style={card.image}
+      />
       <View style={{ flex: 3 }}>
         <TouchableOpacity
+          testID="navigation"
           onPress={() => navigation.navigate("Product", { id: product.id })}
         >
-          <Text style={[text.fat, margin.bottom]}>
-            {product.name} {product.format}
+          <Text testID="name" style={[text.fat, margin.bottom]}>
+            {product?.name} {product?.format}
           </Text>
         </TouchableOpacity>
-        <Text style={margin.bottom}>
-          {product.description.slice(0, 130)}...
+        <Text testID="description" style={margin.bottom}>
+          {product?.description.slice(0, 130)}...
         </Text>
         <View style={{ flexDirection: "row" }}>
-          <RateInactive rating={product.rating ?? 0} />
-          <Text style={margin.left}>{product.rating}</Text>
+          <RateInactive rating={product?.rating ?? 0} />
+          <Text testID="rating" style={margin.left}>
+            {product?.rating}
+          </Text>
         </View>
-        <Text>{product.reviews.length} ratings</Text>
+        <Text>{product?.reviews.length} ratings</Text>
       </View>
     </View>
   );
@@ -58,7 +64,6 @@ const margin = StyleSheet.create({
 });
 
 const content = StyleSheet.create({
-  container: {},
   cardWrapper: {
     width: "95%",
     minHeight: 100,
