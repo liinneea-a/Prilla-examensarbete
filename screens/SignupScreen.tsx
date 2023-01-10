@@ -9,7 +9,6 @@ import { auth } from "../firebase";
 import { setOneDoc } from "../helper";
 import { RootStackScreenProps } from "../types";
 import * as Haptics from "expo-haptics";
-import React from "react";
 
 export default function Signup({ navigation }: RootStackScreenProps<"Signup">) {
   const [user, setUser] = useState({

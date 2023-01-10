@@ -28,7 +28,6 @@ import {
   signOut,
 } from "firebase/auth";
 import { auth } from "../firebase";
-import React from "react";
 
 export default function ProfileScreen({
   navigation,

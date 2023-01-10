@@ -14,7 +14,6 @@ import { RootStackScreenProps } from "../types";
 import { auth } from "../firebase";
 import { useDispatch } from "react-redux";
 import { setActiveUser } from "../redux/signin";
-import React from "react";
 
 export default function Signin({ navigation }: RootStackScreenProps<"Signin">) {
   const [currentUser, setcurrentUser] = useState<User>();
