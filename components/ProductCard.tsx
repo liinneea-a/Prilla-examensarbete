@@ -3,6 +3,7 @@ import { Product } from "../Interfaces";
 import { RateInactive } from "./RateInactive";
 import { Text, View } from "../components/Themed";
 import { useNavigation } from "@react-navigation/native";
+import React from "react";
 
 interface Props {
   product: Product;

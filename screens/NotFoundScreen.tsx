@@ -1,6 +1,5 @@
-import React from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
-
+import React from "react";
 import { Text, View } from "../components/Themed";
 import { RootStackScreenProps } from "../types";
 

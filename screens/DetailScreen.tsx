@@ -15,6 +15,7 @@ import { RootStackScreenProps } from "../types";
 import { RateInactive } from "../components/RateInactive";
 import { AntDesign } from "@expo/vector-icons";
 import { StrengthBar } from "../components/StrengthBar";
+
 interface ReviewWithAuthor extends Review {
   author: string;
 }

@@ -1,5 +1,5 @@
-import React from "react";
 import { Text, TextProps } from "./Themed";
+import React from "react";
 
 export function MonoText(props: TextProps) {
   return (
