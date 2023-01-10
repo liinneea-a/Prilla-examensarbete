@@ -4,8 +4,6 @@ import { Review, User } from "../Interfaces";
 import { ReviewCard } from "./ReviewCard";
 import React, { useEffect, useState } from "react";
 import { getOneDocById } from "../helper";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import { useNavigation } from "@react-navigation/native";
 
 interface Props {
   review: Review;
@@ -13,7 +11,6 @@ interface Props {
 
 export const ActivityCard = ({ review }: Props) => {
   const [author, setAuthor] = useState<User>();
-  const navigation = useNavigation();
 
   useEffect(() => {
     getReviewAuthor();
@@ -29,15 +26,17 @@ export const ActivityCard = ({ review }: Props) => {
   return (
     <View>
       <ImageBackground
-        source={{ uri: review.photo }}
+        source={{ uri: review?.photo }}
         resizeMode="cover"
         style={styles.image}
       >
         <View style={styles.userInfo}>
-          <Text>User Pic</Text>
-          <Text style={styles.username}>{author?.displayName}</Text>
+          <Text testID="placeholder">User Pic</Text>
+          <Text testID="author" style={styles.username}>
+            {author?.displayName}
+          </Text>
         </View>
-        <ReviewCard key={review.id} review={review} />
+        {/* <ReviewCard key={review.id} review={review} /> */}
       </ImageBackground>
     </View>
   );

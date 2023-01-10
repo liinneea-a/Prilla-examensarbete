@@ -2,7 +2,7 @@ import * as React from "react";
 import renderer from "react-test-renderer";
 import Tabbar from "../Tabbar";
 
-it("should contain to text tags", () => {
+it("should contain two text tags", () => {
   const tabb = renderer.create(<Tabbar />);
   const instance = tabb.root;
   const trending = instance.findByProps({ testID: "trending" });

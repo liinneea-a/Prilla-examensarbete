@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should contain to text tags 1`] = `
+<View>
+  <View
+    accessibilityIgnoresInvertColors={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "space-between",
+        "marginBottom": 10,
+        "marginTop": 10,
+        "minHeight": 230,
+        "paddingBottom": 10,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <Image
+      resizeMode="cover"
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "height": undefined,
+            "width": undefined,
+          },
+          undefined,
+        ]
+      }
+      testID="image"
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+            },
+            undefined,
+          ]
+        }
+        testID="placeholder"
+      >
+        User Pic
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+            },
+            Object {
+              "fontWeight": "bold",
+              "marginLeft": 10,
+            },
+          ]
+        }
+        testID="author"
+      />
+    </View>
+  </View>
+</View>
+`;

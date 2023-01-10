@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should contain to text tags 1`] = `
+exports[`should contain two text tags 1`] = `
 <View
   style={
     Object {
